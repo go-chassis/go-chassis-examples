@@ -11,7 +11,7 @@ import (
 	"log"
 )
 
-//if you use go run main.go instead of binary run, plz export CHASSIS_HOME=/{path}/{to}/rpc/server/
+//if you use go run main.go instead of binary run, plz export CHASSIS_HOME=/{path}/{to}/grpc/server/
 // Server is used to implement helloworld.GreeterServer.
 type Server struct{}
 
