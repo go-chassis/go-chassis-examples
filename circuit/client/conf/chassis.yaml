@@ -1,0 +1,16 @@
+---
+cse:
+  service:
+    registry:
+      address: http://127.0.0.1:30100
+  handler:
+    chain:
+      Consumer:
+        default: bizkeeper-consumer,loadbalance,transport
+  transport:
+    failure:
+      rest: http_500,http_502
+  protocols:
+    rest:
+      listenAddress: 127.0.0.1:5000
+      advertiseAddress: 127.0.0.1:5000
