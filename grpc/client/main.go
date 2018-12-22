@@ -7,7 +7,7 @@ import (
 	"github.com/go-chassis/go-chassis/core"
 	"github.com/go-chassis/go-chassis/core/common"
 	"github.com/go-chassis/go-chassis/core/lager"
-	"github.com/go-chassis/go-chassis/examples/grpc/helloworld"
+	"github.com/go-chassis/go-chassis-examples/grpc/helloworld"
 )
 
 //if you use go run main.go instead of binary run, plz export CHASSIS_HOME=/{path}/{to}/grpc/client/

@@ -1,7 +1,7 @@
 module github.com/go-chassis/go-chassis-examples
 
 require (
-	github.com/go-chassis/go-chassis v1.1.1-0.20181204100339-1bbd39acea6d
+	github.com/go-chassis/go-chassis v1.1.4-0.20181222093433-5096bb8a34e5
 	github.com/go-chassis/go-chassis-plugins v0.0.0-20181108070724-c19e5b01b867
 	github.com/go-mesh/mesher v1.5.2-0.20181112024919-f35794494256
 	github.com/go-mesh/openlogging v0.0.0-20181205082104-3d418c478b2d
@@ -9,9 +9,7 @@ require (
 
 	github.com/golang/protobuf v1.2.0
 	github.com/hashicorp/golang-lru v0.5.0 // indirect
-	github.com/json-iterator/go v1.1.5 // indirect
 	github.com/lyft/protoc-gen-validate v0.0.11 // indirect
-	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/pierrec/lz4 v2.0.5+incompatible // indirect
 	github.com/spf13/pflag v1.0.3 // indirect
 	golang.org/x/net v0.0.0-20180906233101-161cd47e91fd

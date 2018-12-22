@@ -4,7 +4,7 @@ import (
 	"github.com/go-chassis/go-chassis"
 	"github.com/go-chassis/go-chassis/core/lager"
 	"github.com/go-chassis/go-chassis/core/server"
-	pb "github.com/go-chassis/go-chassis/examples/grpc/helloworld"
+	pb "github.com/go-chassis/go-chassis-examples/grpc/helloworld"
 	_ "github.com/go-chassis/go-chassis/server/grpc"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc/metadata"

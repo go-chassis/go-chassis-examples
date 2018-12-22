@@ -35,8 +35,8 @@ func (r *CircuitResource) MaxConcurrency(b *rf.Context) {
 //URLPatterns helps to respond for corresponding API calls
 func (r *CircuitResource) URLPatterns() []rf.Route {
 	return []rf.Route{
-		{http.MethodGet, "/error", "GetError"},
-		{http.MethodGet, "/lock", "GetLock"},
-		{http.MethodGet, "/concurrency", "MaxConcurrency"},
+		{Method: http.MethodGet, Path: "/error", ResourceFuncName: "GetError"},
+		{Method: http.MethodGet, Path: "/lock", ResourceFuncName: "GetLock"},
+		{Method: http.MethodGet, Path: "/concurrency", ResourceFuncName: "MaxConcurrency"},
 	}
 }
