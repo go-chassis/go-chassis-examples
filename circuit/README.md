@@ -28,9 +28,9 @@ time out is 1000ms
 
 there is 3 APIs, 2 of them has different problem
 
-1. client calls a API which has a dead lock, circuit breaker will isolate this API
+1. client calls a API which has a dead lock, it will cause timout, so that circuit breaker will isolate this API
 
-2. servcer has a lot error response, circuit breaker will isolate this API
+2. servcer has a lot of error response, circuit breaker will isolate this API
 
 in additinal, if client has a lot of concurrency, circuit breaker will isolate the API
 
