@@ -4,5 +4,4 @@ ssl:
   rest.Provider.protocol: TLSv1.2
   rest.Provider.keyFile: server.key
   rest.Provider.certFile: server.crt
-  rest.Provider.certPwdFile: pwd # include Passphrase
-  rest.Provider.caFile: server.csr
+  rest.Provider.certPwdFile: pwd
