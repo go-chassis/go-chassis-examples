@@ -1,0 +1,70 @@
+swagger: "2.0"
+info:
+  title: ""
+  version: ""
+basePath: /
+paths:
+  /:
+    get:
+      operationId: func1
+      consumes:
+      - application/xml
+      - application/json
+      - application/octet-stream
+      - multipart/form-data
+      produces:
+      - application/json
+      - application/xml
+      - application/octet-stream
+      - multipart/form-data
+      responses:
+        "200":
+          description: ""
+  /sayhello/{userid}:
+    get:
+      operationId: func2
+      consumes:
+      - application/xml
+      - application/json
+      - application/octet-stream
+      - multipart/form-data
+      produces:
+      - application/json
+      - application/xml
+      - application/octet-stream
+      - multipart/form-data
+      responses:
+        "200":
+          description: ""
+  /sayhi:
+    post:
+      operationId: func3
+      consumes:
+      - application/xml
+      - application/json
+      - application/octet-stream
+      - multipart/form-data
+      produces:
+      - application/json
+      - application/xml
+      - application/octet-stream
+      - multipart/form-data
+      responses:
+        "200":
+          description: ""
+  /sayjson:
+    post:
+      operationId: func4
+      consumes:
+      - application/xml
+      - application/json
+      - application/octet-stream
+      - multipart/form-data
+      produces:
+      - application/json
+      - application/xml
+      - application/octet-stream
+      - multipart/form-data
+      responses:
+        "200":
+          description: ""
