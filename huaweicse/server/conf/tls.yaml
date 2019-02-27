@@ -1,0 +1,7 @@
+ssl:
+  rest.Provider.cipherPlugin: default
+  rest.Provider.cipherSuits: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+  rest.Provider.protocol: TLSv1.2
+  rest.Provider.keyFile: server.key
+  rest.Provider.certFile: server.crt
+  rest.Provider.certPwdFile: pwd

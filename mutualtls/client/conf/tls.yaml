@@ -1,6 +1,7 @@
 ssl:
   TLSService.rest.Consumer.cipherSuits: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
   TLSService.rest.Consumer.protocol: TLSv1.2
-  TLSService.rest.Consumer.caFile: client.crt
+  TLSService.rest.Consumer.caFile: server.crt
   TLSService.rest.Consumer.certFile: client.crt
   TLSService.rest.Consumer.keyFile: client.key
+  TLSService.rest.Provider.verifyPeer: true
