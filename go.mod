@@ -1,24 +1,18 @@
 module github.com/go-chassis/go-chassis-examples
 
 require (
-	github.com/DataDog/zstd v1.3.5 // indirect
-	github.com/Shopify/sarama v1.20.1 // indirect
-	github.com/eapache/go-resiliency v1.1.0 // indirect
-	github.com/eapache/go-xerial-snappy v0.0.0-20180814174437-776d5712da21 // indirect
-	github.com/eapache/queue v1.1.0 // indirect
-	github.com/go-chassis/go-chassis v1.2.3-0.20190222074658-6cd393ddbb42
-	github.com/go-chassis/go-chassis-plugins v0.0.0-20181108070724-c19e5b01b867
+	github.com/go-chassis/auth v1.1.0
+	github.com/go-chassis/go-archaius v0.8.0
+	github.com/go-chassis/go-chassis v1.2.3-0.20190223072123-e1270a2aac50
+	github.com/go-chassis/go-chassis-plugins v0.0.0-20190223095430-a97491743855
 	github.com/go-mesh/mesher v1.6.2-0.20190220074152-33c7aab883e2
 	github.com/go-mesh/openlogging v0.0.0-20181205082104-3d418c478b2d
 
 	github.com/golang/protobuf v1.2.0
-	github.com/hashicorp/golang-lru v0.5.0 // indirect
-	github.com/huaweicse/auth v0.0.0-20190215074843-46b97a7adc3f
-	github.com/huaweicse/cse-collector v0.0.0-20190218064311-6b8009138adb
-	github.com/opentracing-contrib/go-observer v0.0.0-20170622124052-a52f23424492 // indirect
+	github.com/huaweicse/auth v0.0.0-20190215074843-46b97a7adc3f // indirect
+	github.com/huaweicse/cse-collector v0.0.0-20190218064311-6b8009138adb // indirect
 	golang.org/x/net v0.0.0-20181114220301-adae6a3d119a
 	google.golang.org/appengine v1.4.0 // indirect
-	google.golang.org/genproto v0.0.0-20181221175505-bd9b4fb69e2f // indirect
 	google.golang.org/grpc v1.16.0
 )
 
