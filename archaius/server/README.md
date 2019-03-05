@@ -3,7 +3,7 @@ This demo show how to mange your custom configurations
 it include 2 custom files.
 
 # custom.yaml
-this file's name is considered as key and content of this file is considered as value
+this file's name is considered as key and content of file is considered as value
 ```go
 archaius.AddFile("./conf/custom.yaml", 
 	archaius.WithFileHandler(filesource.UseFileNameAsKeyContentAsValue))
@@ -16,10 +16,13 @@ archaius.AddFile("./conf/props.yaml")
 ```
 
 See results
+```sh
 go build main.go
 ./main
+```
 
 call http://127.0.0.1:5001/file to see custom.yaml
+
 call http://127.0.0.1:5001/props/{key} to see props.yaml value
 
 you can change file content of any file in runtime, 
