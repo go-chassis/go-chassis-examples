@@ -1,4 +1,4 @@
-This demo show how to mange your custom configurations
+This demo show how to mange your custom configurations in local file system
 
 it include 2 custom files.
 
