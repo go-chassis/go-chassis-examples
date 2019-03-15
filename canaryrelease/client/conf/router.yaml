@@ -1,0 +1,16 @@
+routeRule:
+  carts:
+    - precedence: 2
+      match:
+        headers:
+          Os:
+            regex: ios
+      route:
+        - weight: 100
+          tags:
+            version: 1.1
+    - precedence: 1
+      route:
+        - weight: 100
+          tags:
+            version: 1.0
