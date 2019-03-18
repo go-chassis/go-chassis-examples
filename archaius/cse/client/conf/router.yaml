@@ -1,0 +1,16 @@
+#routeRule:
+#  RESTServer:
+#  - precedence: 2
+#    match:
+#      headers:
+#        Foo:
+#          exact: bar
+#    route:
+#    - weight: 100
+#      tags:
+#        version: 1.0
+#  - precedence: 1
+#    route:
+#    - weight: 100
+#      tags:
+#        version: 2.0

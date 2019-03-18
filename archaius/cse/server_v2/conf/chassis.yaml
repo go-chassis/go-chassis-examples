@@ -1,0 +1,18 @@
+---
+cse:
+  credentials:
+    accessKey:
+    secretKey:
+  service:
+    registry:
+      address: https://cse.cn-north-1.myhuaweicloud.com
+  protocols:
+    rest:
+      listenAddress: 127.0.0.1:9092
+  handler:
+    chain:
+      Provider:
+        incoming: ratelimiter-provider
+  config:
+    client:
+      serverUri: https://cse.cn-north-1.myhuaweicloud.com #uri of config center

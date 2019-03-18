@@ -1,0 +1,21 @@
+---
+cse:
+  service:
+    registry:
+      type: servicecenter
+      scope: full
+      refreshInterval : 30s
+      address: https://cse.cn-north-1.myhuaweicloud.com
+      refeshInterval : 1
+      watch: true
+  config:
+    client:
+      serverUri: https://cse.cn-north-1.myhuaweicloud.com
+  protocols:
+    rest:
+      listenAddress: 127.0.0.1:8080
+      advertiseAddress: 127.0.0.1:8080
+  handler:
+    chain:
+      Consumer:
+        default: bizkeeper-consumer, router, loadbalance,ratelimiter-consumer,transport

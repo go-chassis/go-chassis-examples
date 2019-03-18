@@ -1,0 +1,5 @@
+---
+#Private property of microservices
+service_description:
+  name: RESTServer
+  version: 2.0

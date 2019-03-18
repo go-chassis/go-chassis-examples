@@ -1,0 +1,15 @@
+{
+	"cse.loadbalance.retryEnabled":"true",
+	"cse.loadbalance.retryOnNext":"10",
+	"cse.loadbalance.retryOnSame":"10",
+	"cse.loadbalance.backoff.kind":"jittered",
+	"cse.loadbalance.backoff.MinMs":"200",
+	"cse.loadbalance.backoff.MaxMs":"400"	
+}
+ 
+
+
+
+
+
+

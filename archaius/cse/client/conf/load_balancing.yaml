@@ -1,0 +1,13 @@
+#---
+#cse:
+#  loadbalance:
+#    provider:
+#      strategy:
+#        name: SessionStickiness
+#    retryEnabled: true
+#    retryOnNext: 10 # 向下一实例重试0次
+#    retryOnSame: 10 # 向同一实例重试0次
+#    backoff:
+#      kind: jittered
+#      MinMs: 200
+#      MaxMs: 400

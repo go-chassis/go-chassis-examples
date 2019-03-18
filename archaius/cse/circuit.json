@@ -1,0 +1,18 @@
+{
+	"cse.isolation.Consumer.timeoutInMilliseconds":"1",
+	"cse.isolation.Consumer.maxConcurrentRequests":"1000",
+	"cse.circuitBreaker.Consumer.enabled":"true",
+	"cse.circuitBreaker.Consumer.forceOpen": "false",
+	"cse.circuitBreaker.Consumer.forceClosed":"false",
+	"cse.circuitBreaker.Consumer.sleepWindowInMilliseconds": "10000",
+	"cse.circuitBreaker.Consumer.requestVolumeThreshold":"10",
+	"cse.circuitBreaker.Consumer.errorThresholdPercentage":"30"
+}
+
+
+
+
+
+
+
+
