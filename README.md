@@ -13,10 +13,11 @@ sudo docker-compose up
 2.example of kubernetes and istio requires you run example in complicated environment 
 that you must deploy yourself
 
-3.example of huawei cloud need you to register huawei cloud account to use
+3.example of huawei cloud, 
+you need to register huawei cloud account to use https://www.huaweicloud.com/product/servicestage.html
 
 # Dependencies
-all of examples share same dependency management in go.mod
+all of examples share same dependency management in go.mod. 
 
 before you start you must download all dependencies with go mod. 
 
@@ -27,3 +28,14 @@ GO111MODULE=on go mod download
 #optional
 GO111MODULE=on go mod vendor
 ```
+
+
+# Scenarios
+
+## distributed configuration management
+
+## canary release
+
+## protect you system with circuit breaker to prevent cascade failure
+
+## mutual TLS
