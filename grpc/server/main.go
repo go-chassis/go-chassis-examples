@@ -2,10 +2,10 @@ package main
 
 import (
 	"github.com/go-chassis/go-chassis"
-	"github.com/go-chassis/go-chassis/core/lager"
-	"github.com/go-chassis/go-chassis/core/server"
 	pb "github.com/go-chassis/go-chassis-examples/grpc/helloworld"
 	_ "github.com/go-chassis/go-chassis-protocol/server/grpc"
+	"github.com/go-chassis/go-chassis/core/server"
+	"github.com/go-mesh/openlogging"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc/metadata"
 	"log"
@@ -22,9 +22,9 @@ func (s *Server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloRe
 	return &pb.HelloReply{Message: "Hello " + in.Name}, nil
 }
 func main() {
-	chassis.RegisterSchema("grpc", &Server{}, server.WithGRPCServiceDesc(&pb.Greeter_serviceDesc))
+	chassis.RegisterSchema("grpc", &Server{}, server.WithRPCServiceDesc(&pb.Greeter_serviceDesc))
 	if err := chassis.Init(); err != nil {
-		lager.Logger.Error("Init failed.")
+		openlogging.Error("Init failed.")
 		return
 	}
 	chassis.Run()

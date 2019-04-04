@@ -4,13 +4,14 @@ require (
 	github.com/go-chassis/auth v1.1.0
 	github.com/go-chassis/go-archaius v0.14.0
 	github.com/go-chassis/go-cc-client v0.5.0 // indirect
-	github.com/go-chassis/go-chassis v1.3.1-0.20190404025954-f4fe5783280c
+	github.com/go-chassis/go-chassis v1.4.0
 	github.com/go-chassis/go-chassis-plugins v0.0.0-20190315050150-830f7788619a
-	github.com/go-chassis/go-chassis-protocol v0.0.0-20190404032316-92130f240e5b
+	github.com/go-chassis/go-chassis-protocol v0.0.0-20190404065549-3aa5744623ad
 	github.com/go-chassis/huawei-apm v0.0.0-20190315092647-1634e5f5cace
 	github.com/go-mesh/mesher v1.6.1
 	github.com/go-mesh/openlogging v0.0.0-20181205082104-3d418c478b2d
 	github.com/gogo/googleapis v1.1.0 // indirect
+	github.com/gogo/protobuf v1.2.0 // indirect
 	github.com/golang/protobuf v1.2.0
 	github.com/huaweicse/auth v1.1.1-0.20190215074843-46b97a7adc3f
 	github.com/huaweicse/cse-collector v0.0.0-20190218064311-6b8009138adb // indirect
