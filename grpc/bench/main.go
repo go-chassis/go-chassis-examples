@@ -1,20 +1,22 @@
 package main
 
 import (
-	"github.com/go-chassis/go-chassis-examples/grpc/helloworld"
-	_ "github.com/go-chassis/go-chassis/bootstrap"
-	_ "github.com/go-chassis/go-chassis-protocol/client/grpc"
-	"golang.org/x/net/context"
 	"log"
 	"net/http"
+
 	_ "net/http/pprof"
-	"sync"
 	"os"
+	"sync"
 	"time"
-	"google.golang.org/grpc"
+
+	"github.com/go-chassis/go-chassis"
+	"github.com/go-chassis/go-chassis-examples/grpc/helloworld"
+	_ "github.com/go-chassis/go-chassis-protocol/client/grpc"
+	_ "github.com/go-chassis/go-chassis/bootstrap"
 	"github.com/go-chassis/go-chassis/core"
 	"github.com/go-mesh/openlogging"
-	"github.com/go-chassis/go-chassis"
+	"golang.org/x/net/context"
+	"google.golang.org/grpc"
 )
 
 var wg = sync.WaitGroup{}
