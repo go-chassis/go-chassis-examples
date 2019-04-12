@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/go-chassis/go-chassis-examples/grpc/helloworld"
 	_ "github.com/go-chassis/go-chassis/bootstrap"
-	_ "github.com/go-chassis/go-chassis/client/grpc"
+	_ "github.com/go-chassis/go-chassis-protocol/client/grpc"
 	"golang.org/x/net/context"
 	"log"
 	"net/http"
