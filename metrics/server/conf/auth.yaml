@@ -1,0 +1,6 @@
+cse:
+  credentials:
+    accessKey:
+    secretKey:
+    project:
+    akskCustomCipher: default
