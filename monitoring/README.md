@@ -20,7 +20,7 @@ export CHASSIS_HOME=$PWD
 go run main.go
 
 ```
-3. Run Rest client
+3. Run rest client
 ```sh 
  cd client
  export CHASSIS_HOME=$PWD

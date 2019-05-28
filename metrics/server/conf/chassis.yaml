@@ -1,0 +1,24 @@
+---
+cse:
+  service:
+    registry:
+      type: servicecenter
+      scope: full
+      refreshInterval : 10s
+      address: http://127.0.0.1:30100
+#      address: https://cse.cn-north-1.myhuaweicloud.com
+      refeshInterval : 1
+      watch: true
+  protocols:
+    rest:
+      listenAddress: 127.0.0.1:8080
+      advertiseAddress: 127.0.0.1:8080
+  handler:
+    chain:
+      Provider:
+        incoming: ratelimiter-provider,tracing-provider,bizkeeper-provider
+  metrics:
+    apiPath: /metrics      # we can also give api path having prefix "/" ,like /adas/metrics
+    enable: true
+    enableGoRuntimeMetrics: true
+    enableCircuitMetrics: true
