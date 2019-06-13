@@ -1,0 +1,11 @@
+---
+cse:
+  service:
+    registry:
+      type: servicecenter
+#      address: https://cse.cn-north-1.myhuaweicloud.com
+      address: http://127.0.0.1:30100
+  protocols:
+    rest:
+      listenAddress: 127.0.0.1:8081
+      advertiseAddress: 127.0.0.1:8081
