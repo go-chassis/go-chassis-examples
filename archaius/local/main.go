@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/go-chassis/go-archaius"
-	"github.com/go-chassis/go-archaius/sources/file-source"
+	"github.com/go-chassis/go-archaius/source/file"
 	"github.com/go-chassis/go-chassis"
 	"github.com/go-chassis/go-chassis-examples/archaius/resource"
 	"github.com/go-mesh/openlogging"

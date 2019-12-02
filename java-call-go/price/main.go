@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/go-chassis/go-chassis"
+	"github.com/go-chassis/go-chassis-examples/java-call-go/price/controller"
 	"github.com/go-chassis/go-chassis/core/lager"
 	"github.com/go-chassis/go-chassis/core/server"
-	"github.com/go-chassis/go-chassis/examples/java-call-go/price/controller"
 )
 
 func main() {

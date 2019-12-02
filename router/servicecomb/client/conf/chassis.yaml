@@ -8,3 +8,6 @@ cse:
     client:
       serverUri: http://127.0.0.1:30110
       type: servicecomb-kie
+  protocols:
+    rest:
+      listenAddress: 127.0.0.1:9000

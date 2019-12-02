@@ -2,9 +2,10 @@ package main
 
 import (
 	"context"
-	"time"
+	"github.com/go-chassis/go-chassis/server/restful"
+	"net/http"
 
-	_ "github.com/go-chassis/go-chassis-config/servicecomb"
+	//_ "github.com/apache/servicecomb-kie/client/adaptor"
 
 	"github.com/go-chassis/go-chassis"
 	_ "github.com/go-chassis/go-chassis/bootstrap"
@@ -14,34 +15,42 @@ import (
 	"github.com/go-chassis/go-chassis/pkg/util/httputil"
 )
 
-//if you use go run main.go instead of binary run, plz export CHASSIS_HOME=/{path}/{to}/rest/client/
+// RestFulRouterB is a struct used for implementation of restfull router program
+type RestFulRouterB struct {
+	called int
+}
 
-// Implement grayscale publishing of the application,version  A is you old service ,version B is you
-// new service.you want to small request to access you new service to test new service of new function
+// Equal is method to compare given num and slice product
+func (r *RestFulRouterB) GetPayments(ctx *restful.Context) {
+	req, err := rest.NewRequest("GET", "http://paymentService/payments", nil)
+	if err != nil {
+		lager.Logger.Error("new request failed.")
+		return
+	}
+
+	resp, err := core.NewRestInvoker().ContextDo(context.Background(), req)
+	if err != nil {
+		lager.Logger.Error("do request failed.")
+		return
+	}
+	defer resp.Body.Close()
+
+	ctx.Write(httputil.ReadBody(resp))
+}
+
+// URLPatterns helps to respond for corresponding API calls
+func (r *RestFulRouterB) URLPatterns() []restful.Route {
+	return []restful.Route{
+		{Method: http.MethodGet, Path: "/payments", ResourceFunc: r.GetPayments},
+	}
+}
 
 func main() {
+	chassis.RegisterSchema("rest",&RestFulRouterB{})
 	//Init framework
 	if err := chassis.Init(); err != nil {
 		lager.Logger.Error("Init failed." + err.Error())
 		return
 	}
-
-	for i := 0; i < 10; i++ {
-		req, err := rest.NewRequest("GET", "http://paymentService/payments", nil)
-		if err != nil {
-			lager.Logger.Error("new request failed.")
-			return
-		}
-
-
-		resp, err := core.NewRestInvoker().ContextDo(context.Background(), req)
-		if err != nil {
-			lager.Logger.Error("do request failed.")
-			return
-		}
-		defer resp.Body.Close()
-		lager.Logger.Info("paymentService response: " + string(httputil.ReadBody(resp)))
-
-		time.Sleep(1 * time.Second)
-	}
+	chassis.Run()
 }
