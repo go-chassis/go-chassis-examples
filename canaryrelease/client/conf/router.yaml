@@ -1,5 +1,5 @@
 routeRule:
-  carts:
+  carts: |
     - precedence: 2
       match:
         headers:
