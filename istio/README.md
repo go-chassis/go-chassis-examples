@@ -1,6 +1,7 @@
 ## Istio pilot as Discovery Service for go-chassis
 
-go-chassis can be integrated with Istio Pilot for service discovery. To enable Istio pilot support in go-chassis, the simple 2 steps are needed during development:
+go-chassis is able to integrated with Istio Pilot for service discovery. 
+To enable Istio pilot support, by following  2 simple steps:
 
 1. Import the istiov2 registry plugin of mesher
 
@@ -29,7 +30,9 @@ Disable the registrator(since we don't have to register the service to Pilot exp
 
 ### Deploy the Kubernetes resources
 
-All the changes mentioned above are already done in the demo project. The image building and Kubernetes resources deployment are already obtained in the Makefile(go explore it if you are interested), are few steps are needed:
+All the changes mentioned above are already done in the demo project. 
+The image building and Kubernetes resources deployment are already obtained in the Makefile(go explore it if you are interested), 
+are few steps are needed:
 
 ```bash
 $ cd server

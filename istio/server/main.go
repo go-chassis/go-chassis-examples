@@ -1,11 +1,11 @@
 package main
 
 import (
+	_ "github.com/apache/servicecomb-mesher/proxy/plugins/registry/istiov2"
 	"github.com/go-chassis/go-chassis"
 	"github.com/go-chassis/go-chassis/core/lager"
 	"github.com/go-chassis/go-chassis/core/server"
 	"github.com/go-chassis/go-chassis/examples/schemas"
-	_ "github.com/go-mesh/mesher/plugins/registry/istiov2"
 	"github.com/go-mesh/openlogging"
 )
 

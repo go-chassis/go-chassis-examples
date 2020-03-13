@@ -9,9 +9,8 @@ import (
 	"github.com/go-chassis/go-chassis/core"
 	"github.com/go-chassis/go-chassis/core/lager"
 
-	_ "github.com/go-chassis/go-chassis/bootstrap"
+	_ "github.com/apache/servicecomb-mesher/proxy/plugins/registry/istiov2"
 	"github.com/go-chassis/go-chassis/pkg/util/httputil"
-	_ "github.com/go-mesh/mesher/plugins/registry/istiov2"
 	"github.com/go-mesh/openlogging"
 )
 
