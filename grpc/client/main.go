@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/go-chassis/go-chassis"
 	"github.com/go-chassis/go-chassis-examples/grpc/helloworld"
-	_ "github.com/go-chassis/go-chassis-protocol/client/grpc"
+	_ "github.com/go-chassis/go-chassis-extension/protocol/grpc/client"
 	_ "github.com/go-chassis/go-chassis/bootstrap"
 	"github.com/go-chassis/go-chassis/core"
 	"github.com/go-chassis/go-chassis/core/common"

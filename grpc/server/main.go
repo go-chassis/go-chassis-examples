@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/go-chassis/go-chassis"
 	pb "github.com/go-chassis/go-chassis-examples/grpc/helloworld"
-	_ "github.com/go-chassis/go-chassis-protocol/server/grpc"
+	_ "github.com/go-chassis/go-chassis-extension/protocol/grpc/server"
 	"github.com/go-chassis/go-chassis/core/server"
 	"github.com/go-mesh/openlogging"
 	"golang.org/x/net/context"
