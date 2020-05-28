@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/go-chassis/go-chassis"
-	_ "github.com/go-chassis/go-chassis-plugins/tracing/zipkin"
+	_ "github.com/go-chassis/go-chassis-extension/tracing/zipkin"
 	_ "github.com/go-chassis/go-chassis/bootstrap"
 	"github.com/go-chassis/go-chassis/client/rest"
 	"github.com/go-chassis/go-chassis/core"

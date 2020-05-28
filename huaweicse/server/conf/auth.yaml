@@ -1,6 +1,0 @@
-## Huawei Public Cloud ak/sk
-cse:
-  credentials:
-    accessKey:
-    secretKey:
-    akskCustomCipher: default #used to decrypt sk when it is encrypted

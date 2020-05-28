@@ -2,7 +2,7 @@ package main
 
 import (
 	//tracers
-	_ "github.com/go-chassis/go-chassis-plugins/tracing/zipkin"
+	_ "github.com/go-chassis/go-chassis-extension/tracing/zipkin"
 
 	"github.com/go-chassis/go-chassis"
 	"github.com/go-chassis/go-chassis/core/server"
