@@ -1,0 +1,7 @@
+---
+servicecomb:
+  registry:
+      address: http://127.0.0.1:30100
+  protocols:
+    rest:
+      listenAddress: 127.0.0.1:9000
