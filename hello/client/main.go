@@ -5,10 +5,10 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/go-chassis/go-chassis/pkg/util/httputil"
 	"github.com/go-chassis/go-chassis/v2"
 	"github.com/go-chassis/go-chassis/v2/client/rest"
 	"github.com/go-chassis/go-chassis/v2/core"
+	"github.com/go-chassis/go-chassis/v2/pkg/util/httputil"
 	rf "github.com/go-chassis/go-chassis/v2/server/restful"
 	"github.com/go-chassis/openlog"
 )
