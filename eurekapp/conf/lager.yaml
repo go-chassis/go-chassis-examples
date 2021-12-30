@@ -1,0 +1,11 @@
+---
+logWriters: file,stdout
+# LoggerLevel: |DEBUG|INFO|WARN|ERROR|FATAL
+logLevel: DEBUG
+logFile: log/chassis.log
+logFormatText: false
+logRotateDisable: false
+#log rotate and backup settings
+logRotateAge: 1 # after n days
+logRotateSize: 10 # megabytes
+logBackupCount: 7

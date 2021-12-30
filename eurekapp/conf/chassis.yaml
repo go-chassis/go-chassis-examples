@@ -1,0 +1,17 @@
+---
+servicecomb:
+  registry:
+    disabled: false
+    type: "eureka"
+    address: http://127.0.0.1:8761/eureka/v2
+  protocols:
+    rest:
+      listenAddress: 127.0.0.1:5001
+  metrics:
+    apiPath: /metrics      # we can also give api path having prefix "/" ,like /adas/metrics
+    enable: true
+    enableGoRuntimeMetrics: true
+    enableCircuitMetrics: true
+  profile:
+    enable: true
+    apiPath: /profile
