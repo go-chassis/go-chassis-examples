@@ -1,15 +1,15 @@
 package main
 
 import (
-	"github.com/go-chassis/go-chassis"
+	"github.com/go-chassis/go-chassis/v2"
 
 	"context"
 
-	_ "github.com/go-chassis/go-chassis/bootstrap"
-	"github.com/go-chassis/go-chassis/client/rest"
-	"github.com/go-chassis/go-chassis/core"
-	"github.com/go-chassis/go-chassis/pkg/util/httputil"
-	"github.com/go-mesh/openlogging"
+	_ "github.com/go-chassis/go-chassis/v2/bootstrap"
+	"github.com/go-chassis/go-chassis/v2/client/rest"
+	"github.com/go-chassis/go-chassis/v2/core"
+	"github.com/go-chassis/go-chassis/v2/pkg/util/httputil"
+	"github.com/go-chassis/openlog"
 	"sync"
 )
 
@@ -17,7 +17,7 @@ import (
 func main() {
 	//Init framework
 	if err := chassis.Init(); err != nil {
-		openlogging.Error("Init failed." + err.Error())
+		openlog.Error("Init failed." + err.Error())
 		return
 	}
 	for i := 0; i < 100; i++ {
@@ -38,19 +38,19 @@ func main() {
 func callError() {
 	req, err := rest.NewRequest("GET", "http://CircuitServer/error", nil)
 	if err != nil {
-		openlogging.GetLogger().Error("new request failed.")
+		openlog.GetLogger().Error("new request failed.")
 		return
 	}
 	resp, err := core.NewRestInvoker().ContextDo(context.TODO(), req)
 	if resp != nil {
 		if resp.Body != nil {
-			openlogging.GetLogger().Info("response body: " + string(httputil.ReadBody(resp)))
+			openlog.GetLogger().Info("response body: " + string(httputil.ReadBody(resp)))
 			defer resp.Body.Close()
 		}
 	}
 
 	if err != nil {
-		openlogging.GetLogger().Error("request failed: " + err.Error())
+		openlog.GetLogger().Error("request failed: " + err.Error())
 		return
 	}
 
@@ -59,18 +59,18 @@ func callConcurrency(wg *sync.WaitGroup) {
 	defer wg.Done()
 	req, err := rest.NewRequest("GET", "http://CircuitServer/concurrency", nil)
 	if err != nil {
-		openlogging.Error("new request failed.")
+		openlog.Error("new request failed.")
 		return
 	}
 	resp, err := core.NewRestInvoker().ContextDo(context.TODO(), req)
 	if resp != nil {
 		if resp.Body != nil {
 			defer resp.Body.Close()
-			openlogging.GetLogger().Info("response body: " + string(httputil.ReadBody(resp)))
+			openlog.GetLogger().Info("response body: " + string(httputil.ReadBody(resp)))
 		}
 	}
 	if err != nil {
-		openlogging.GetLogger().Error("request failed: " + err.Error())
+		openlog.GetLogger().Error("request failed: " + err.Error())
 		return
 	}
 
@@ -78,18 +78,18 @@ func callConcurrency(wg *sync.WaitGroup) {
 func callDeadlock() {
 	req, err := rest.NewRequest("GET", "http://CircuitServer/lock", nil)
 	if err != nil {
-		openlogging.Error("new request failed.")
+		openlog.Error("new request failed.")
 		return
 	}
 	resp, err := core.NewRestInvoker().ContextDo(context.TODO(), req)
 	if resp != nil {
 		if resp.Body != nil {
 			defer resp.Body.Close()
-			openlogging.GetLogger().Info("response body: " + string(httputil.ReadBody(resp)))
+			openlog.GetLogger().Info("response body: " + string(httputil.ReadBody(resp)))
 		}
 	}
 	if err != nil {
-		openlogging.GetLogger().Error("request failed: " + err.Error())
+		openlog.GetLogger().Error("request failed: " + err.Error())
 		return
 	}
 

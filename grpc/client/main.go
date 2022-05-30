@@ -1,20 +1,20 @@
 package main
 
 import (
-	"github.com/go-chassis/go-chassis"
 	"github.com/go-chassis/go-chassis-examples/grpc/helloworld"
 	_ "github.com/go-chassis/go-chassis-extension/protocol/grpc/client"
-	_ "github.com/go-chassis/go-chassis/bootstrap"
-	"github.com/go-chassis/go-chassis/core"
-	"github.com/go-chassis/go-chassis/core/common"
-	"github.com/go-mesh/openlogging"
+	"github.com/go-chassis/go-chassis/v2"
+	_ "github.com/go-chassis/go-chassis/v2/bootstrap"
+	"github.com/go-chassis/go-chassis/v2/core"
+	"github.com/go-chassis/go-chassis/v2/core/common"
+	"github.com/go-chassis/openlog"
 )
 
 //if you use go run main.go instead of binary run, plz export CHASSIS_HOME=/{path}/{to}/grpc/client/
 func main() {
 	//Init framework
 	if err := chassis.Init(); err != nil {
-		openlogging.Error("Init failed." + err.Error())
+		openlog.Error("Init failed." + err.Error())
 		return
 	}
 	//declare reply struct
@@ -28,7 +28,7 @@ func main() {
 	//Invoke with micro service name, schema ID and operation ID
 	if err := invoker.Invoke(ctx, "RPCServer", "helloworld.Greeter", "SayHello",
 		&helloworld.HelloRequest{Name: "Peter"}, reply, core.WithProtocol("grpc")); err != nil {
-		openlogging.Error("error" + err.Error())
+		openlog.Error("error" + err.Error())
 	}
-	openlogging.Info(reply.Message)
+	openlog.Info(reply.Message)
 }

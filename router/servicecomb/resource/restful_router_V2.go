@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/go-chassis/go-chassis/server/restful"
+	"github.com/go-chassis/go-chassis/v2/server/restful"
 )
 
 // RestFulRouterB is a struct used for implementation of restfull router program
@@ -19,6 +19,7 @@ func (r *RestFulRouterB) GetPayments(context *restful.Context) {
 	r.called++
 	context.Write([]byte(fmt.Sprintf("version V2 was called: %d times", r.called)))
 }
+
 // Say is method to reply version B say some info
 func (r *RestFulRouterB) Say(context *restful.Context) {
 	reslut := struct {

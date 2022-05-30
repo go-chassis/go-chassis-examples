@@ -2,7 +2,7 @@ package controller
 
 import (
 	goRestful "github.com/emicklei/go-restful"
-	rf "github.com/go-chassis/go-chassis/server/restful"
+	rf "github.com/go-chassis/go-chassis/v2/server/restful"
 	"net/http"
 )
 

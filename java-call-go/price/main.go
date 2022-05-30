@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/go-chassis/go-chassis"
 	"github.com/go-chassis/go-chassis-examples/java-call-go/price/controller"
-	"github.com/go-chassis/go-chassis/core/lager"
-	"github.com/go-chassis/go-chassis/core/server"
+	"github.com/go-chassis/go-chassis/v2"
+	"github.com/go-chassis/go-chassis/v2/core/lager"
+	"github.com/go-chassis/go-chassis/v2/core/server"
 )
 
 func main() {

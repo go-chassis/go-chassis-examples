@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/go-chassis/go-chassis/pkg/metrics"
-	"github.com/go-chassis/go-chassis/server/restful"
+	"github.com/go-chassis/go-chassis/v2/pkg/metrics"
+	"github.com/go-chassis/go-chassis/v2/server/restful"
 )
 
 type User struct {

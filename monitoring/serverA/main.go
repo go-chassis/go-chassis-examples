@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/go-chassis/go-chassis"
-	"github.com/go-chassis/go-chassis/core/lager"
-	"github.com/go-chassis/go-chassis/core/server"
-	"github.com/go-chassis/go-chassis/examples/schemas"
+	"github.com/go-chassis/go-chassis/v2"
+	"github.com/go-chassis/go-chassis/v2/core/server"
+	"github.com/go-chassis/go-chassis/v2/examples/schemas"
+	"github.com/go-chassis/openlog"
+
 	//tracers
 	_ "github.com/go-chassis/go-chassis-extension/tracing/zipkin"
 )
@@ -14,7 +15,7 @@ import (
 func main() {
 	chassis.RegisterSchema("rest", &schemas.TracingHello{}, server.WithSchemaID("TracingHello"))
 	if err := chassis.Init(); err != nil {
-		lager.Logger.Error("Init failed." + err.Error())
+		openlog.Error("Init failed." + err.Error())
 		return
 	}
 	chassis.Run()
