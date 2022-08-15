@@ -1,6 +1,5 @@
 package main
 
-import _ "github.com/huaweicse/auth/adaptor/gochassis"
 import (
 	"github.com/go-chassis/go-chassis-examples/archaius/resource"
 	"github.com/go-chassis/go-chassis/v2"
