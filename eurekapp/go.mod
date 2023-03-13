@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	gitee.com/daqingshu/eurekaplugin/v2 v2.0.2
-	github.com/emicklei/go-restful v2.12.0+incompatible
+	github.com/emicklei/go-restful v2.16.0+incompatible
 	github.com/go-chassis/go-chassis/v2 v2.3.1-0.20211217084436-360a6a6a0ef3
 	github.com/go-chassis/openlog v1.1.3
 )
