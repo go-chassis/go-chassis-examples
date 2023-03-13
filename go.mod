@@ -1,7 +1,7 @@
 module github.com/go-chassis/go-chassis-examples
 
 require (
-	github.com/emicklei/go-restful v2.15.1-0.20220703112237-d9c71e118c95+incompatible
+	github.com/emicklei/go-restful v2.16.0+incompatible
 	github.com/go-chassis/go-archaius v1.5.6
 	github.com/go-chassis/go-chassis v1.8.3
 	github.com/go-chassis/go-chassis-extension/protocol/fiber4r v0.0.0-20220815025917-8cf6a8451620
