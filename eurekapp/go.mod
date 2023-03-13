@@ -24,7 +24,7 @@ require (
 	github.com/go-chassis/sc-client v0.6.1-0.20210918130508-2b9daad232da // indirect
 	github.com/go-chassis/seclog v1.3.1-0.20210917082355-52c40864f240 // indirect
 	github.com/go-resty/resty/v2 v2.7.0 // indirect
-	github.com/gogo/protobuf v1.3.1 // indirect
+	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.4.3 // indirect
 	github.com/gorilla/websocket v1.4.3-0.20210424162022-e8629af678b7 // indirect
 	github.com/hashicorp/go-version v1.0.0 // indirect
